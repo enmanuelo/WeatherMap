@@ -1,7 +1,8 @@
 ﻿using Newtonsoft.Json.Linq;
 
 var client = new HttpClient();
-var key = "c7929052a9b849513f5679a3dd8e32d3";
+Console.WriteLine("Enter key: ");
+var key = Console.ReadLine();
 var city = "Compton";
 var weatherURL = $"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={key}&units=imperial";
 var response = client.GetStringAsync(weatherURL).Result;
